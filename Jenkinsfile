@@ -8,6 +8,6 @@ node {
         echo "We are at stage 2!"
     }
     stage("Stage 3") {
-        python -V
+        sh 'python -V'
     }
 }
