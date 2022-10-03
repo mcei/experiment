@@ -22,5 +22,10 @@ pipeline {
                 echo "My env var is ${env.my_var}"
             }
         }
+        stage("Stage Allure") {
+            steps {
+                allure results: [[path: 'allure-results']]
+            }
+        }
     }
 }
